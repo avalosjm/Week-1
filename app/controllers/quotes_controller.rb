@@ -3,9 +3,7 @@ class QuotesController < ApplicationController
 		@quote = Quote.order("RANDOM()").first
 	end
 
-	def new
-		@quote = Quote.new
-	end
+	# this is where def new was, but now not needed due to modal box used
 
 	def create
 		@quote = Quote.create(quote_params)
@@ -14,7 +12,7 @@ class QuotesController < ApplicationController
 		end
 
 		redirect_to root_path	
-		
+
 	end
 
 	def about
